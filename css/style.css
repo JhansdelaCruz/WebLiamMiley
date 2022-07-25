@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Inter', sans-serif;
+
+}
+
+/**MENU ENCABEZADO
+..............................................
+..............................................
+**/
+
+.header {
+	width: 100%;
+	height: 100px;
+	background: #FFFBFC;
+	position: static;
+	box-shadow: 3px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container1 {
+	max-width: 1100px;
+	margin: auto;
+}
+
+.logo {
+	float: left;
+	width: 30%;
+	padding-left: 3%;
+	margin-top: 1.5%;
+	margin-bottom: 1%;
+}
+
+.logo img {
+
+	width: 100%;
+}
+
+.menu {
+
+	float: right;
+	line-height: 40px;
+	padding-top: 2.5%;
+	padding-bottom: 2%;
+	padding-right: 3%;
+	font-weight: 700;
+}
+
+.menu ul {
+	display: flex;
+	list-style: none;
+
+}
+
+.menu a {
+	display: block;
+	padding: 0px 20px;
+	text-decoration: none;
+	color: #658FA6;
+	transition: all 50ms ease;
+}
+
+.menu a:hover {
+	border-bottom: solid;
+	color: #e23353;
+
+}
+
+.menu .submenu {
+	background: #fff;
+	box-shadow: 3px 20px 10px rgba(0, 0, 0, 0.2);
+	display: none;
+}
+
+.menu .submenu li a {
+	line-height: 50px;
+
+}
+
+.menu ul li a:hover+ul,
+.menu .submenu:hover {
+	display: block;
+
+}
+
+
+/**CUERPO
+..............................................
+..............................................
+**/
+body {
+	width: 100%;
+}
+
+main {
+	background-image: url(../imagenes/home/home.jpg);
+	background-attachment: local;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	overflow: hidden;
+
+}
+
+.capa {
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(rgba(182, 8, 45, 0.76), rgba(36, 0, 70, 0.76));
+}
+
+.contenido {
+	padding-top: 15%;
+	padding-bottom: 14%;
+	margin: auto;
+	color: rgb(255, 255, 255);
+
+}
+.contenido p{
+
+	font-weight: 700;
+	font-size: 3.5rem;
+	text-align: center;
+	letter-spacing: 0.4em;
+	line-height: 2em;
+
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
+
+.quienesSomos {
+	background: #FFFBFC;
+}
+
+.quienesSomos_gif {
+	width: 15%;
+	place-items: center;
+}
+
+.quienesSomos {
+	text-align: center;
+	border-bottom: 2px solid #ccc;
+	padding: 50px 0 60px;
+}
+
+.quienesSomos_container {
+	width: 50%;
+	padding-top: 5%;
+	padding-bottom: 8%;
+	margin: 0 auto;
+}
+
+.quienesSomos_name {
+	margin: 20px 0;
+}
+
+.quienesSomos_tag {
+	font-weight: 700;
+	color: #0078F7;
+	margin-bottom: 20px;
+}
+
+.quienesSomos_paragraph {
+	text-align: center;
+	line-height: 1.5;
+	color: #615a5a;
+}
+
+
+.slider {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	background-image: linear-gradient(to top, #0b0b0b, #100b1a, #140b25, #170b30, #1b083a, #34164a, #4c2559, #653569, #906186, #b992a8, #ddc5cf, #fffbfc);
+	overflow: hidden;
+	margin: auto;
+}
+
+.slider-container {
+	width: 100%;
+	height: 85%;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	margin: auto;
+}
+.slider-span{
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	position: absolute;
+}
+
+
+.image-slider {
+	width: 100%;
+	height: 600px;
+	position: relative;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	transition: .7s;
+}
+
+.slider-div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 30px 0 30px;
+}
+
+.img {
+	position: relative;
+	width: 240px;
+	height: 348px;
+	transition: .5s;
+	filter: saturate(10%);
+}
+
+.button {
+	position: absolute;
+	width: 240px;
+	height: 348px;
+	transition: .5s;
+	background-color: rgba(48, 51, 46, .4);
+}
+
+.button:hover {
+	background-color: rgba(48, 51, 46, .2);
+}
+
+#slider-span1:target~.image-slider #img1,
+#slider-span1:target~.image-slider #button-1 {
+	width: 324px;
+	height: 470px;
+	background-color: transparent;
+	filter: saturate(100%);
+}
+
+#slider-span2:target~.image-slider #img2,
+#slider-span2:target~.image-slider #button-2 {
+	width: 324px;
+	height: 470px;
+	background-color: transparent;
+	filter: saturate(100%);
+}
+
+#slider-span3:target~.image-slider #img3,
+#slider-span3:target~.image-slider #button-3 {
+	width: 324px;
+	height: 470px;
+	background-color: transparent;
+	filter: saturate(100%);
+}
+
+#slider-span4:target~.image-slider #img4,
+#slider-span4:target~.image-slider #button-4 {
+	width: 324px;
+	height: 470px;
+	background-color: transparent;
+	filter: saturate(100%);
+}
+
+#slider-span5:target~.image-slider #img5,
+#slider-span5:target~.image-slider #button-5 {
+	width: 324px;
+	height: 470px;
+	background-color: transparent;
+	filter: saturate(100%);
+}
+
+#slider-span6:target~.image-slider #img6,
+#slider-span6:target~.image-slider #button-6 {
+	width: 324px;
+	height: 470px;
+	background-color: transparent;
+	filter: saturate(100%);
+}
+
+#slider-span7:target~.image-slider #img7,
+#slider-span7:target~.image-slider #button-7 {
+	width: 324px;
+	height: 470px;
+	background-color: transparent;
+	filter: saturate(100%);
+}
+
+/*image position*/
+
+
+
+#slider-span1:target~.image-slider {
+	left: 70%;
+}
+
+#slider-span2:target~.image-slider {
+	left: 50%;
+}
+
+#slider-span3:target~.image-slider {
+	left: 25%;
+}
+
+#slider-span5:target~.image-slider {
+	left: -25%;
+}
+
+#slider-span6:target~.image-slider {
+	left: -50%;
+}
+
+#slider-span7:target~.image-slider {
+	left: -70%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.final {
+	padding-top: 1%;
+	padding-bottom: 9%;
+	background-image: linear-gradient(to bottom, #0b0b0b, #0b0b0b, #0c0c0c, #0c0c0c, #0c0c0c);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+}
+
+.centro {
+	text-align: center;
+
+}
+
+.primero {
+	font-weight: 700;
+	font-size: 3rem;
+	color: #ffffff;
+	padding-top: 3%;
+	padding-bottom: 1%;
+}
+
+.segundo {
+	font-weight: 700;
+	font-size: 1.5rem;
+	color: #CB63FF;
+	padding-top: 1%;
+	padding-bottom: 3%;
+}
+
+.social {
+	padding-top: 2%;
+	color: #30332E;
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.csocial {
+	width: 25%;
+	padding: 1%;
+	margin: auto;
+	float: left;
+	position: static;
+
+}
+
+.imgsocial {
+	width: 25%;
+	block-size: 60px;
+	border-radius: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	overflow: hidden;
+
+}
+
+#imgsocialF {
+	background: #0078F7;
+}
+
+#imgsocialW {
+	background: #48C857;
+}
+
+#imgsocialM {
+	background: #0078F7;
+}
+
+#imgsocialI {
+	background-image: linear-gradient(to right top, #fbbc59, #ff8d5b, #ff5e75, #e23c99, #9e3fbd);
+}
+
+.imgsocial:hover {
+	transition: all 80ms ease;
+	width: 50%;
+}
+
+.imgsocial01 {
+	width: 20px;
+	fill: #FFFBFC;
+
+}
+
+.imgsocial02 {
+	width: 30px;
+	fill: #FFFBFC;
+}
+
+.imgsocial03 {
+	width: 30px;
+	fill: #FFFBFC;
+}
+
+.imgsocial04 {
+	width: 30px;
+	fill: #FFFBFC;
+}
+
+.nomsocial {
+	width: 100%;
+	border-radius: 25px;
+	background: #FFFBFC;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 500ms ease;
+	overflow: hidden;
+}
+
+.nomsocial a {
+	text-decoration: none;
+	color: #30332E;
+	transition: all 800ms ease;
+	font-weight: 700;
+	font-size: 1rem;
+	padding: auto;
+	padding-top: 18%;
+	padding-left: 32%;
+	padding-right: 32%;
+	padding-bottom: 18%;
+	display: block;
+}
+
+#nomsocialRS01 {
+	color: #0078F7;
+}
+
+#nomsocialRS01:hover {
+	color: #FFFBFC;
+}
+
+#nomsocialRS02 {
+	color: #48C857;
+}
+
+#nomsocialRS02:hover {
+	color: #FFFBFC;
+}
+
+#nomsocialRS03 {
+	color: #0078F7;
+}
+
+#nomsocialRS03:hover {
+	color: #FFFBFC;
+}
+
+#nomsocialRS04 {
+	color: #DF466D;
+}
+
+#nomsocialRS04:hover {
+	color: #FFFBFC;
+}
+
+#nomsocial01:hover {
+	background: #0078F7;
+}
+
+#nomsocial02:hover {
+	background: #48C857;
+}
+
+#nomsocial03:hover {
+	background: #0078F7;
+}
+
+#nomsocial04:hover {
+	background-image: linear-gradient(to right top, #fbbc59, #ff8d5b, #ff5e75, #e23c99, #9e3fbd);
+}
+
+.footer {
+	background-image: url(../imagenes/footer/footer.jpg);
+	background-attachment: local;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	overflow: hidden;
+}
+
+.capa01 {
+	width: 100%;
+	height: 100%;
+	padding-top: 2%;
+	padding-bottom: 3%;
+	background-image: linear-gradient(to bottom, rgba(182, 8, 45), rgba(156, 0, 61, 0.97), rgba(122, 0, 72, 0.95), rgba(82, 0, 75, 0.97), rgba(36, 0, 70));
+}
+
+.capa01 p {
+	font-size: 1rem;
+	font-weight:100;
+	text-align: center;
+	color: #FFFBFC;
+	letter-spacing: 0.07em;
+}
